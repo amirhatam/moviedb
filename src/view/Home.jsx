@@ -31,13 +31,15 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      "http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=" +
-        this.formatDateToday() +
-        "&primary_release_date.lte=" +
-        this.formatDateNextMonth() +
-        "&api_key=e441f8a3a151d588a4932d2c5d310769"
-    )
+    const url = `http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${this.formatDateToday()}&primary_release_date.lte=${this.formatDateNextMonth()}&api_key=e441f8a3a151d588a4932d2c5d310769`
+
+    fetch(url)
+    //   "http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=" +
+    //     this.formatDateToday() +
+    //     "&primary_release_date.lte=" +
+    //     this.formatDateNextMonth() +
+    //     "&api_key=e441f8a3a151d588a4932d2c5d310769"
+    // )
       .then((response) => response.json())
       .then((data) => {
 
