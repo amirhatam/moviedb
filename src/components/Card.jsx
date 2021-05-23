@@ -21,7 +21,6 @@ export default class Card extends Component {
   }
 
   render() {
-    console.log(this.state.image)
     return (
       <div className=" containerCard text-center mx-2">
         <div className=" text-center my-3">
