@@ -24,7 +24,7 @@ export default class Card extends Component {
 
     const image = this.props.poster_path ?
     `https://image.tmdb.org/t/p/w300/${this.props.poster_path}`: 
-    "http://www.pngall.com/wp-content/uploads/1/Film-High-Quality-PNG.png";
+    "https://c7.alamy.com/comp/JK2YKY/film-stripe-reel-on-movie-cinema-negative-JK2YKY.jpg";
 
     return (
       <div className=" containerCard text-center mx-2">
