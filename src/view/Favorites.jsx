@@ -41,7 +41,7 @@ export default class Favorites extends Component {
   getMovie(id) {
     const apiKey = "e441f8a3a151d588a4932d2c5d310769";
 
-    fetch(`http://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
       .then((response) => response.json())
       .then((data) => {
         // console.log("Favorites fetch", data)
