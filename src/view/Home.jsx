@@ -34,12 +34,12 @@ export default class Home extends Component {
     const url = `https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${this.formatDateToday()}&primary_release_date.lte=${this.formatDateNextMonth()}&api_key=e441f8a3a151d588a4932d2c5d310769`
 
     fetch(url)
-    //   "http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=" +
-    //     this.formatDateToday() +
-    //     "&primary_release_date.lte=" +
-    //     this.formatDateNextMonth() +
-    //     "&api_key=e441f8a3a151d588a4932d2c5d310769"
-    // )
+      //   "http://api.themoviedb.org/3/discover/movie?primary_release_date.gte=" +
+      //     this.formatDateToday() +
+      //     "&primary_release_date.lte=" +
+      //     this.formatDateNextMonth() +
+      //     "&api_key=e441f8a3a151d588a4932d2c5d310769"
+      // )
       .then((response) => response.json())
       .then((data) => {
 
@@ -56,7 +56,7 @@ export default class Home extends Component {
   render() {
     return (
       <div
-        
+
         className="container text-center"
       >
         <h1 className="font-weight-light mb-0 mt-4">New Upcoming Movies</h1>
@@ -70,10 +70,10 @@ export default class Home extends Component {
           <div></div>
         </Slider>
         <div className=" m-5 ">
-            {this.state.movies.map((elem, index) => {
-              return <Card key={index} {...elem} />;
-            })}
-          </div>
+          {this.state.movies.map((elem, index) => {
+            return <Card key={index} {...elem} />;
+          })}
+        </div>
 
       </div>
     );

@@ -38,7 +38,6 @@ class PopularBattle extends Component {
 
   renderTwoMovies() {
     const { indexFirstMovieOfCurrentBattle } = this.state;
-
     return (
       <>
         <div
